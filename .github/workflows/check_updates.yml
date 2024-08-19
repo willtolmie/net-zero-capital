@@ -2,7 +2,7 @@ name: Send Weekly Email
 
 on:
   schedule:
-    - cron: '07 12 * * 1' # Runs at 10:31 AM every Monday
+    - cron: '07 12 * * 1' # Runs at 12:07 PM every Monday
 
 jobs:
   send-email:
