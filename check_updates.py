@@ -72,7 +72,7 @@ def send_email():
     # attach the body with the msg instance
     msg.attach(MIMEText(html_content, "html"))
 
-    # Create a secure SSL context and send the email
+    # create a secure SSL context and send the email
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(sender_email, password)
