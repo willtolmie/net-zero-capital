@@ -22,3 +22,6 @@ jobs:
 
     - name: Run check_updates script
       run: python check_updates.py
+      env:
+        EMAIL_USER: ${{ secrets.EMAIL_USER }}
+        EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
