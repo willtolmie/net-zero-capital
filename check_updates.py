@@ -9,6 +9,9 @@ sender_email = os.getenv("EMAIL_USER")
 receiver_email = os.getenv("EMAIL_USER")
 password = os.getenv("EMAIL_PASS")
 
+print(f"Using sender: {sender_email}")
+print(f"Attempting to send to: {receiver_email}")
+
 def get_company_names():
     with open("company_names.txt", 'r') as file:
         company_names = [line.strip() for line in file]
@@ -81,3 +84,5 @@ def send_email():
         print("Email sent successfully!")
     except Exception as e:
         print(f"Error: {e}")
+
+send_email()
