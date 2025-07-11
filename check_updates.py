@@ -1,8 +1,13 @@
+import os
 import requests
 import smtplib
 from bs4 import BeautifulSoup
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+
+sender_email = os.getenv("EMAIL_USER")
+receiver_email = os.getenv("EMAIL_USER")
+password = os.getenv("EMAIL_PASS")
 
 def get_company_names():
     with open("company_names.txt", 'r') as file:
@@ -47,10 +52,6 @@ def generate_message():
     return body 
 
 def send_email():
-    # email credentials
-    sender_email = "will@nzcapitalgroup.com"
-    receiver_email = "will@nzcapitalgroup.com"
-    password = "htve qlbf emjo ehhl"
 
     # email content
     subject = "Recent News Regarding Net Zero Commitments"
